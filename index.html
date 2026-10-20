@@ -3,293 +3,245 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ELITE BUNDLES | Data & Airtime</title>
+
+  <title>Elite Bundles GH | Data Bundles</title>
+
+  <meta name="description"
+        content="Buy affordable data bundles in Ghana with Elite Bundles GH.">
+
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
       font-family: Arial, sans-serif;
       background: #080808;
-      color: #fff;
+      color: #ffffff;
+      line-height: 1.6;
     }
 
     header {
-      padding: 22px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #29220f;
+      background: #111111;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #c9a227;
     }
 
     .logo {
-      color: #e9bd55;
-      font-size: 21px;
+      color: #e6c65a;
+      font-size: 27px;
       font-weight: bold;
       letter-spacing: 1px;
     }
 
-    .badge {
-      border: 1px solid #bd963f;
-      color: #e9bd55;
-      border-radius: 20px;
-      padding: 7px 12px;
-      font-size: 12px;
+    header p {
+      color: #cccccc;
+      font-size: 13px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      padding: 15px;
+      background: #151515;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #e6c65a;
+      text-decoration: none;
+      font-size: 14px;
     }
 
     .hero {
       text-align: center;
-      padding: 48px 20px 30px;
+      padding: 55px 20px;
+      background: linear-gradient(145deg, #17130a, #080808);
     }
 
     .hero h1 {
-      font-size: 35px;
+      font-size: 34px;
+      color: #e6c65a;
       margin-bottom: 12px;
     }
 
-    .hero h1 span {
-      color: #e9bd55;
-    }
-
     .hero p {
-      color: #aaa;
-      line-height: 1.6;
+      color: #dddddd;
+      margin-bottom: 25px;
     }
 
-    .container {
-      max-width: 520px;
+    .button {
+      display: inline-block;
+      background: #d4af37;
+      color: #080808;
+      padding: 12px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 35px 18px;
+      max-width: 1000px;
       margin: auto;
-      padding: 15px 18px 40px;
     }
 
-    .card {
-      background: #111;
-      border: 1px solid #292929;
-      border-radius: 16px;
-      padding: 22px;
-      margin-bottom: 18px;
-    }
-
-    .card h2 {
-      font-size: 18px;
-      margin-bottom: 18px;
+    .section-title {
+      text-align: center;
+      color: #e6c65a;
+      margin-bottom: 25px;
+      font-size: 25px;
     }
 
     .networks {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
     }
 
-    .network {
-      background: #191919;
-      border: 1px solid #333;
-      color: #fff;
-      border-radius: 10px;
-      padding: 15px 5px;
-      cursor: pointer;
-      font-weight: bold;
+    .card {
+      background: #141414;
+      border: 1px solid #39301a;
+      border-radius: 12px;
+      padding: 22px;
+      text-align: center;
     }
 
-    .network.active {
-      border-color: #e9bd55;
-      color: #e9bd55;
-      background: #211b0d;
+    .card h3 {
+      color: #e6c65a;
+      font-size: 21px;
+      margin-bottom: 10px;
     }
 
-    .tabs {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .tab {
-      flex: 1;
-      padding: 12px;
-      border: 1px solid #333;
-      background: #191919;
-      color: #fff;
-      border-radius: 9px;
-      cursor: pointer;
-    }
-
-    .tab.active {
-      background: #e9bd55;
-      color: #111;
-      border-color: #e9bd55;
-      font-weight: bold;
-    }
-
-    label {
-      display: block;
-      color: #ccc;
-      margin: 15px 0 8px;
+    .card p {
+      color: #cccccc;
+      margin-bottom: 16px;
       font-size: 14px;
     }
 
-    input, select {
-      width: 100%;
-      padding: 14px;
-      background: #191919;
-      color: #fff;
-      border: 1px solid #393939;
-      border-radius: 9px;
-      font-size: 15px;
-    }
-
-    .primary {
-      width: 100%;
-      margin-top: 20px;
-      padding: 15px;
-      background: #e9bd55;
-      border: none;
-      border-radius: 9px;
-      color: #111;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
     .notice {
-      color: #999;
+      color: #bdbdbd;
       font-size: 12px;
-      line-height: 1.6;
+      margin-top: 12px;
+    }
+
+    .contact {
       text-align: center;
-      margin-top: 16px;
+      background: #111111;
+      border-top: 1px solid #39301a;
+      border-bottom: 1px solid #39301a;
+      max-width: none;
     }
 
     footer {
       text-align: center;
-      padding: 25px;
-      color: #777;
-      border-top: 1px solid #292929;
+      padding: 22px;
+      color: #999999;
       font-size: 12px;
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .logo {
+        font-size: 23px;
+      }
     }
   </style>
 </head>
 
 <body>
+
   <header>
-    <div class="logo">ELITE BUNDLES</div>
-    <div class="badge">GHANA 🇬🇭</div>
+    <div class="logo">👑 ELITE BUNDLES GH</div>
+    <p>Your Data. Your Connection. Your Choice.</p>
   </header>
 
-  <section class="hero">
-    <h1>Your Data.<br><span>Your World.</span></h1>
-    <p>Choose your network, select a bundle<br>and prepare your order.</p>
-  </section>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#bundles">Data Bundles</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <main class="container">
-    <section class="card">
-      <h2>01 — Select Network</h2>
+  <main>
+    <section class="hero" id="home">
+      <h1>Stay Connected for Less</h1>
+
+      <p>
+        Discover affordable data bundle options
+        for your everyday internet needs.
+      </p>
+
+      <a href="#bundles" class="button">Explore Bundles</a>
+    </section>
+
+    <section id="bundles">
+      <h2 class="section-title">Choose Your Network</h2>
+
       <div class="networks">
-        <button class="network active" data-network="MTN">MTN</button>
-        <button class="network" data-network="Telecel">Telecel</button>
-        <button class="network" data-network="AT">AT</button>
+
+        <div class="card">
+          <h3>MTN Ghana</h3>
+          <p>Explore MTN data bundle options.</p>
+          <a class="button" href="#contact">Order MTN</a>
+        </div>
+
+        <div class="card">
+          <h3>Telecel Ghana</h3>
+          <p>Explore Telecel data bundle options.</p>
+          <a class="button" href="#contact">Order Telecel</a>
+        </div>
+
+        <div class="card">
+          <h3>AT Ghana</h3>
+          <p>Explore AT data bundle options.</p>
+          <a class="button" href="#contact">Order AT</a>
+        </div>
+
+      </div>
+
+      <p class="notice" style="text-align:center;">
+        Bundle prices and availability will be added after supplier setup.
+      </p>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">Why Elite Bundles GH?</h2>
+
+      <div class="card">
+        <p>
+          Our goal is to make purchasing data bundles
+          simple, convenient and affordable for customers in Ghana.
+        </p>
       </div>
     </section>
 
-    <section class="card">
-      <h2>02 — Choose Your Product</h2>
+    <section class="contact" id="contact">
+      <h2 class="section-title">Need Assistance?</h2>
 
-      <div class="tabs">
-        <button class="tab active" data-type="data">Buy Data</button>
-        <button class="tab" data-type="airtime">Buy Airtime</button>
-      </div>
-
-      <label for="phone">Recipient phone number</label>
-      <input id="phone" type="tel" placeholder="e.g. 0241234567"
-             inputmode="numeric" maxlength="10">
-
-      <div id="bundle-area">
-        <label for="bundle">Select data bundle</label>
-        <select id="bundle">
-          <option value="">Choose a bundle</option>
-          <option value="1">1 GB — Demo</option>
-          <option value="2">2 GB — Demo</option>
-          <option value="5">5 GB — Demo</option>
-          <option value="10">10 GB — Demo</option>
-        </select>
-      </div>
-
-      <div id="airtime-area" hidden>
-        <label for="amount">Airtime amount (GH₵)</label>
-        <input id="amount" type="number" min="1" placeholder="Enter amount">
-      </div>
-
-      <button class="primary" id="order">Continue</button>
+      <p style="margin-bottom:20px;">
+        Contact our customer support team for assistance.
+      </p>
 
       <p class="notice">
-        DEMO WEBSITE: Payments and data delivery are not connected yet.
-        No money will be collected.
+        Customer support contact details coming soon.
       </p>
     </section>
   </main>
 
   <footer>
-    © 2026 ELITE BUNDLES · Ghana
+    <p>© 2026 Elite Bundles GH. All rights reserved.</p>
+    <p>Independent data bundle storefront.</p>
   </footer>
 
-  <script>
-    let network = "MTN";
-    let type = "data";
-
-    document.querySelectorAll(".network").forEach(button => {
-      button.addEventListener("click", () => {
-        document.querySelectorAll(".network").forEach(item =>
-          item.classList.remove("active")
-        );
-        button.classList.add("active");
-        network = button.dataset.network;
-      });
-    });
-
-    document.querySelectorAll(".tab").forEach(button => {
-      button.addEventListener("click", () => {
-        document.querySelectorAll(".tab").forEach(item =>
-          item.classList.remove("active")
-        );
-        button.classList.add("active");
-        type = button.dataset.type;
-
-        document.getElementById("bundle-area").hidden = type !== "data";
-        document.getElementById("airtime-area").hidden = type !== "airtime";
-      });
-    });
-
-    document.getElementById("order").addEventListener("click", () => {
-      const phone = document.getElementById("phone").value.trim();
-
-      if (!/^0\d{9}$/.test(phone)) {
-        alert("Enter a valid 10-digit Ghanaian phone number.");
-        return;
-      }
-
-      if (type === "data" &&
-          !document.getElementById("bundle").value) {
-        alert("Please select a data bundle.");
-        return;
-      }
-
-      if (type === "airtime") {
-        const amount = Number(document.getElementById("amount").value);
-        if (!Number.isFinite(amount) || amount < 1) {
-          alert("Enter a valid airtime amount.");
-          return;
-        }
-      }
-
-      alert(
-        "Your demo order details have been checked.\\n\\n" +
-        "Network: " + network + "\\n" +
-        "Product: " + type + "\\n" +
-        "Phone: " + phone + "\\n\\n" +
-        "Real payments and delivery will be added later."
-      );
-    });
-  </script>
 </body>
 </html>
