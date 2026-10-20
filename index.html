@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELITE BUNDLES | Data & Airtime</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #080808;
+      color: #fff;
+    }
+
+    header {
+      padding: 22px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #29220f;
+    }
+
+    .logo {
+      color: #e9bd55;
+      font-size: 21px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .badge {
+      border: 1px solid #bd963f;
+      color: #e9bd55;
+      border-radius: 20px;
+      padding: 7px 12px;
+      font-size: 12px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 48px 20px 30px;
+    }
+
+    .hero h1 {
+      font-size: 35px;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 span {
+      color: #e9bd55;
+    }
+
+    .hero p {
+      color: #aaa;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 520px;
+      margin: auto;
+      padding: 15px 18px 40px;
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid #292929;
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+
+    .card h2 {
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+
+    .networks {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .network {
+      background: #191919;
+      border: 1px solid #333;
+      color: #fff;
+      border-radius: 10px;
+      padding: 15px 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .network.active {
+      border-color: #e9bd55;
+      color: #e9bd55;
+      background: #211b0d;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #333;
+      background: #191919;
+      color: #fff;
+      border-radius: 9px;
+      cursor: pointer;
+    }
+
+    .tab.active {
+      background: #e9bd55;
+      color: #111;
+      border-color: #e9bd55;
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      color: #ccc;
+      margin: 15px 0 8px;
+      font-size: 14px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 14px;
+      background: #191919;
+      color: #fff;
+      border: 1px solid #393939;
+      border-radius: 9px;
+      font-size: 15px;
+    }
+
+    .primary {
+      width: 100%;
+      margin-top: 20px;
+      padding: 15px;
+      background: #e9bd55;
+      border: none;
+      border-radius: 9px;
+      color: #111;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .notice {
+      color: #999;
+      font-size: 12px;
+      line-height: 1.6;
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #777;
+      border-top: 1px solid #292929;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">ELITE BUNDLES</div>
+    <div class="badge">GHANA 🇬🇭</div>
+  </header>
+
+  <section class="hero">
+    <h1>Your Data.<br><span>Your World.</span></h1>
+    <p>Choose your network, select a bundle<br>and prepare your order.</p>
+  </section>
+
+  <main class="container">
+    <section class="card">
+      <h2>01 — Select Network</h2>
+      <div class="networks">
+        <button class="network active" data-network="MTN">MTN</button>
+        <button class="network" data-network="Telecel">Telecel</button>
+        <button class="network" data-network="AT">AT</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>02 — Choose Your Product</h2>
+
+      <div class="tabs">
+        <button class="tab active" data-type="data">Buy Data</button>
+        <button class="tab" data-type="airtime">Buy Airtime</button>
+      </div>
+
+      <label for="phone">Recipient phone number</label>
+      <input id="phone" type="tel" placeholder="e.g. 0241234567"
+             inputmode="numeric" maxlength="10">
+
+      <div id="bundle-area">
+        <label for="bundle">Select data bundle</label>
+        <select id="bundle">
+          <option value="">Choose a bundle</option>
+          <option value="1">1 GB — Demo</option>
+          <option value="2">2 GB — Demo</option>
+          <option value="5">5 GB — Demo</option>
+          <option value="10">10 GB — Demo</option>
+        </select>
+      </div>
+
+      <div id="airtime-area" hidden>
+        <label for="amount">Airtime amount (GH₵)</label>
+        <input id="amount" type="number" min="1" placeholder="Enter amount">
+      </div>
+
+      <button class="primary" id="order">Continue</button>
+
+      <p class="notice">
+        DEMO WEBSITE: Payments and data delivery are not connected yet.
+        No money will be collected.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 ELITE BUNDLES · Ghana
+  </footer>
+
+  <script>
+    let network = "MTN";
+    let type = "data";
+
+    document.querySelectorAll(".network").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".network").forEach(item =>
+          item.classList.remove("active")
+        );
+        button.classList.add("active");
+        network = button.dataset.network;
+      });
+    });
+
+    document.querySelectorAll(".tab").forEach(button => {
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".tab").forEach(item =>
+          item.classList.remove("active")
+        );
+        button.classList.add("active");
+        type = button.dataset.type;
+
+        document.getElementById("bundle-area").hidden = type !== "data";
+        document.getElementById("airtime-area").hidden = type !== "airtime";
+      });
+    });
+
+    document.getElementById("order").addEventListener("click", () => {
+      const phone = document.getElementById("phone").value.trim();
+
+      if (!/^0\d{9}$/.test(phone)) {
+        alert("Enter a valid 10-digit Ghanaian phone number.");
+        return;
+      }
+
+      if (type === "data" &&
+          !document.getElementById("bundle").value) {
+        alert("Please select a data bundle.");
+        return;
+      }
+
+      if (type === "airtime") {
+        const amount = Number(document.getElementById("amount").value);
+        if (!Number.isFinite(amount) || amount < 1) {
+          alert("Enter a valid airtime amount.");
+          return;
+        }
+      }
+
+      alert(
+        "Your demo order details have been checked.\\n\\n" +
+        "Network: " + network + "\\n" +
+        "Product: " + type + "\\n" +
+        "Phone: " + phone + "\\n\\n" +
+        "Real payments and delivery will be added later."
+      );
+    });
+  </script>
+</body>
+</html>
